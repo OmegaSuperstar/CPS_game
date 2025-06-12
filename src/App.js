@@ -6,11 +6,11 @@ import Savescore from "./Savescore";
 import Login from "./Login";
 import Register from "./Register";
 import Navbar from "./Navbar";
-import { AuthProvider } from "./AuthContext";
+import { AuthProvider } from "./AuthContext";  // <-- import here
 
 function App() {
   return (
-    <AuthProvider>
+    <AuthProvider>   {/* <-- wrap the whole app */}
       <BrowserRouter>
         <Navbar />
         <Routes>

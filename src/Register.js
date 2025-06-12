@@ -30,10 +30,30 @@ function Register() {
   return (
     <div className="authContainer">
       <h2>Register</h2>
-      <input value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
-      <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-      <button onClick={register}>Register</button>
+      <input
+        className="authInput"
+        placeholder="Username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <input
+        className="authInput"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        className="authInput"
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <div className="buttonGroup">
+        <button className="authButton primary" onClick={register}>
+          Register
+        </button>
+      </div>
     </div>
   );
 }

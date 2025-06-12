@@ -1,13 +1,14 @@
 // Game.js
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Game.css"; // Import the CSS file
 
 function Game() {
   const [clicks, setClicks] = useState(0);
   const [timeLeft, setTimeLeft] = useState(5);
   const [isRunning, setIsRunning] = useState(false);
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     let timer;
     if (isRunning && timeLeft > 0) {
@@ -19,14 +20,12 @@ function Game() {
     return () => clearTimeout(timer);
   }, [timeLeft, isRunning, navigate]);
 
-  const startGame = () => {
-    setClicks(0);
-    setTimeLeft(5);
-    setIsRunning(true);
-  };
-
   const handleClick = () => {
-    if (isRunning) {
+    if (!isRunning) {
+      setClicks(1); // Count first click
+      setTimeLeft(5);
+      setIsRunning(true);
+    } else {
       setClicks((prev) => prev + 1);
     }
   };
@@ -35,15 +34,20 @@ function Game() {
   const averageCPS = secondsElapsed > 0 ? (clicks / secondsElapsed).toFixed(2) : 0;
 
   return (
-    <div style={{ textAlign: "center", padding: 30 }}>
-      <h1>CPS Test</h1>
-      <p>Time Left: {timeLeft}s</p>
-      <p>Clicks: {clicks}</p>
-      {isRunning && <p>Average CPS: {averageCPS}</p>}
-      <button onClick={startGame}>Start</button>
-      <button onClick={handleClick} disabled={!isRunning}>
-        Click Me!
+    <div className="game-container">
+        <button onClick={handleClick} className="fullscreen-button">
+          {!isRunning && (
+            <div className="overlay-text">Click Me</div>
+          )}
+
+        <div className="info-overlay">
+          <h1>CPS Test</h1>
+          <p>Time Left: {timeLeft}s</p>
+          <p>Clicks: {clicks}</p>
+          {isRunning && <p>Average CPS: {averageCPS}</p>}
+        </div>
       </button>
+
     </div>
   );
 }

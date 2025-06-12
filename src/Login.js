@@ -13,17 +13,38 @@ function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
-    } catch (err) {
-      alert(err.message);
+    } catch (error) {
+      alert(error.message);
     }
   };
 
   return (
     <div className="authContainer">
-    <h2>Login</h2>
-      <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-      <button onClick={login}>Login</button>
+      <h2>Login</h2>
+      <input
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="authInput"
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        className="authInput"
+      />
+      <div className="buttonGroup">
+        <button className="authButton primary" onClick={login}>
+          Login
+        </button>
+        <button
+          className="authButton secondary"
+          onClick={() => navigate("/leaderboard")}
+        >
+          View Leaderboard
+        </button>
+      </div>
     </div>
   );
 }

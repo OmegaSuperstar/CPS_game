@@ -1,0 +1,50 @@
+/* Game.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  margin: 0;
+  padding: 0;
+}
+
+.fullscreen-button {
+  width: 100vw;
+  height: 50vh;
+  background-color: #28aaeb;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+}
+
+.fullscreen-button:disabled {
+  cursor: default;
+}
+
+.overlay-text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  color: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  text-align: center;
+  user-select: none;
+}
+
+.info-overlay {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  pointer-events: none;
+  text-align: center;
+  font-size: 20px;
+}

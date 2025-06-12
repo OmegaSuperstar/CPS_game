@@ -1,40 +1,49 @@
 .authContainer {
-  max-width: 400px;
-  margin: 60px auto;
-  background-color: #e6f2ff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: sans-serif;
+  max-width: 320px;
+  margin: 40px auto;
+  padding: 20px 25px;
+  background: #e6f0fb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.authContainer h2 {
-  margin-bottom: 20px;
-  color: #003366;
-}
-
-.authContainer input {
-  width: 80%;
-  padding: 10px;
+.authInput {
+  width: 100%;
+  padding: 10px 12px;
   margin: 10px 0;
-  border: 1px solid #a0c4e3;
-  border-radius: 6px;
+  border: 1.5px solid #91c8fb;
+  border-radius: 5px;
   font-size: 16px;
+  box-sizing: border-box;
+  outline-offset: 2px;
+  transition: border-color 0.3s;
 }
 
-.authContainer button {
-  margin-top: 10px;
-  background-color: #91c8fb;
-  color: #003366;
+.authInput:focus {
+  border-color: #5ea0fb;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center; /* center single button */
+  margin-top: 20px;
+}
+
+.authButton {
+  padding: 12px 0;
+  width: 100%;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
   border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
-  font-weight: bold;
+  transition: background-color 0.3s;
+  font-weight: 600;
+  background-color: #91c8fb;
+  color: white;
 }
 
-.authContainer button:hover {
-  background-color: #7ebcf8;
+.authButton:hover {
+  background-color: #6ca7fa;
 }
