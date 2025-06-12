@@ -1,0 +1,71 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    color: #002b5b;
+  }
+  
+  .scoreContainer {
+    text-align: center;
+    padding: 0px 20px;
+    min-height: 100vh;
+    background-color: #e6f4ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .scoreHeading {
+    font-size: 2rem;    
+    color: #003366;
+    margin-bottom: 30px;
+  }
+  
+  .scoreInput {
+    padding: 12px 20px;
+    border: 2px solid #99ccff;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 250px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .scoreInput:focus {
+    border-color: #3399ff;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .scoreButton {
+    background-color: #3399ff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .scoreButton:hover {
+    background-color: #267acc;
+  }
+  
+  .scoreButton.secondary {
+    background-color: #ffffff;
+    color: #003366;
+    border: 2px solid #3399ff;
+  }
+  
+  .scoreButton.secondary:hover {
+    background-color: #d6ecff;
+  }
+  

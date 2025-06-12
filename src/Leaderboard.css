@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background-color: #f0f8ff;
+    color: #002b5b;
+  }
+  
+  .leaderboardDiv {
+    text-align: center;
+    padding: 40px;
+    min-height: 100vh;
+    background-color: #e6f4ff;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  h1 {
+    background-color: #91c8fb;
+    padding: 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 43, 91, 0.1);
+    color: #003366;
+    margin-bottom: 40px;
+  }
+  
+  ol {
+    list-style: decimal;
+    padding-left: 0;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  li {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 43, 91, 0.1);
+    color: #003366;
+    font-weight: 500;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 30px;
+  }
+  
+  li:hover {
+    transform: scale(1.1);
+  }
+  
+  .gold {
+    background-color: #ffd90076;
+    color: #221e00;
+    box-shadow: 0px 0px 35px 10px rgb(238, 200, 8);
+    transform: scale(1.05);
+    border: 1px solid rgb(255, 191, 0);
+  }
+
+  .gold:hover {
+    transform: scale(1.15);
+  }
+  
+  .silver {
+    background-color: #c0c0c083;
+    color: #1f1f1f;
+    box-shadow: 0px 0px 10px 10px rgb(255, 255, 255);
+    border: 1px solid silver;
+  }
+  
+  .bronze {
+    background-color: #c76f1793;
+    color: #201100;
+    box-shadow: 0px 0px 15px 3px rgb(228, 123, 3);
+    border: 1px solid rgba(212, 108, 33, 0.29);
+  }
